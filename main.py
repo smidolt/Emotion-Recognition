@@ -17,11 +17,14 @@ def overlay_emoji(frame, top_left, bottom_right, emotion):
         print("Face detection is out of frame boundaries. Skipping overlay.")
         return
 
-    emoji_path = emotion_emojis.get(emotion)
+    # Get emoji path from the 'images' directory
+    emoji_path = os.path.join('images', emotion_emojis.get(emotion))
     if not emoji_path or not os.path.exists(emoji_path):
         print(f'Emoji file for {emotion} not found')
         return
     emoji = cv2.imread(emoji_path, cv2.IMREAD_UNCHANGED)
+
+
 
     # Convert emoji colors from BGRA to RGBA
     emoji = cv2.cvtColor(emoji, cv2.COLOR_BGRA2RGBA)
