@@ -3,7 +3,7 @@ configuration = []
 
 [info]
 name = "EmotionalRecognition 2"
-description = "This is a generated description. Replace it with your own."
+description = "EmotionalRecognition"
 
 [runtime]
 application = "app.py"
