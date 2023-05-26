@@ -1,0 +1,14 @@
+config_version = "2.0"
+configuration = []
+
+[info]
+name = "EmotionalRecognition 2"
+description = "This is a generated description. Replace it with your own."
+
+[runtime]
+application = "app.py"
+workdir = "/app"
+
+[runtime.runs_on]
+type = "image"
+name = "ghcr.io/luxonis/robothub-app-v2:2023.108.0914-regular"
